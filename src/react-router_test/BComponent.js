@@ -5,13 +5,8 @@
  */
 import React, {Component} from 'react';
 
-
-class CommentBox extends Component {
+export default class AComponent extends Component {
     render() {
-        return <div>{this.props.name}</div>
-    }
-    componentDidMount() {
+        return <div>我是BComponent</div>;
     }
 }
-
-export {CommentBox as default}

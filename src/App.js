@@ -13,6 +13,16 @@ class App extends Component {
         alert("准备提交了....name:" + name + "   age:" + age);
     }
 
+    constructor(props) {
+        super(props);
+        window.document.addEventListener('message', function (e) {
+            const message = e.data
+            console.log(message);
+            alert("收到 原生的消息message:" + JSON.stringify(message));
+        });
+        //alert("cookie22222:" + document.cookie)
+    }
+
     render() {
         return (
             <div className="App">
